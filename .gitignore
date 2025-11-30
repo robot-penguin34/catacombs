@@ -1,0 +1,5 @@
+/target
+/resources/*
+/public/*
+!/public/app.css
+!/resources/style.html

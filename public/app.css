@@ -1,0 +1,90 @@
+:root {
+  --color-background: #0F0F0F;
+  --color-primary: #B0B2B8;
+  --color-heading: #818AAB;
+  --color-heading: #6FAFD1;
+  --color-orange: #EB4511;
+  --color-yellow: #FFCC26;
+  --color-purple: #8e4fad;
+
+  font-family: monospace;
+
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  padding-inline: 8px;
+  font-size: 1.5em;
+}
+
+body {
+  padding-bottom: 300px;
+}
+
+h1 {
+  color: var(--color-purple);
+}
+
+h2, h3, h4 {
+  color: var(--color-heading);
+}
+
+a {
+  color: var(--color-purple);
+  font-weight: bold;
+}
+
+pre:has(code) {
+    display: block;
+    font-family: monospace;
+    unicode-bidi: isolate;
+    white-space: pre;
+    margin-block: 1em 1em;
+    margin-inline: 0px;
+    overflow-x: auto;
+    background: none;
+    background-color: #212121;
+    width: fit-content;
+    padding-right: 10px;
+}
+
+code {
+  padding: 8px;
+  line-height: 200%;
+  margin-top: 3px;
+  border-radius: 4px;
+  background-color: #212121;
+  color: #00fc04;
+}
+
+blockquote {
+  border-left: 4px solid #63347a;
+  margin-right: 10px;
+  padding-right: 10px;
+  font-style: italic;
+  padding-inline: 20px;
+}
+
+
+/* specific designs */
+
+.center-content {
+  width: 50%;
+  margin: auto;
+}
+
+.banner {
+  color: white;
+}
+
+.banner a {
+  color: var(--color-heading);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.banner a:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5em;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/app.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> {{ title }} </title>
+</head>
+<body>
+  <div class="banner">
+      <a href="/" id="home_button"></a>
+  </div>
+  <script>
+    const path = window.location.pathname;
+    let finalpath = path;
+    if (path.length > 20) {
+      finalpath = path.split('/')[1] + "/...";
+    }
+    document.getElementById("home_button").textContent="~" + finalpath;
+  </script>
+  <div class="center-content">
+    {{ content }}
+  </div>
+</body>
+</html>
