@@ -7,7 +7,6 @@ use rocket::{response::content::RawHtml};
 use rocket::State;
 use utilities::{stylize_html, SharedComponents};
 
-use crate::utilities::Details;
 #[macro_use] extern crate rocket;
 mod utilities;
 
@@ -18,8 +17,9 @@ async fn rickroll() -> rocket::response::Redirect {
 }
 
 #[get("/")]
-async fn index() -> rocket::response::Redirect {
-    rocket::response::Redirect::to(uri!(serve_public_file("index.md")))
+async fn index(style: &State<SharedComponents>) -> Result<ResponseVariant, (Status, Option<RawHtml<String>>)> {
+    // rather than redirect, just make it serve that function to make the url cleaner.
+    serve_public_file(style, "index.md".into()).await
 }
 
 #[derive(Responder)]
